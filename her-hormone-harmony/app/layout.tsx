@@ -1,26 +1,12 @@
 import type { Metadata } from "next";
-import { Fraunces, Karla } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  axes: ["opsz", "SOFT"],
-  display: "swap",
-});
-
-const karla = Karla({
-  subsets: ["latin"],
-  variable: "--font-karla",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://herhormoneharmony.com"),
   title: {
-    default: "Her Hormone Harmony \u2014 Wellness, Cycle Syncing, Natural Living",
+    default: "Her Hormone Harmony — Wellness, Cycle Syncing, Natural Living",
     template: "%s | Her Hormone Harmony",
   },
   description:
@@ -33,7 +19,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${karla.variable}`}>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,100..900,0..100&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         <Header />
         <main>{children}</main>
