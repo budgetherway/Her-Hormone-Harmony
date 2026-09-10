@@ -9,7 +9,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Design tokens sampled from the Her Hormone Harmony logo.
         ivory: "#F7F4ED",
         "ivory-dim": "#EFEAE0",
         terracotta: {
@@ -35,8 +34,8 @@ const config: Config = {
         ink: "#2C2A24",
       },
       fontFamily: {
-        display: ["var(--font-fraunces)", "serif"],
-        body: ["var(--font-karla)", "sans-serif"],
+        display: ["Fraunces", "serif"],
+        body: ["Karla", "sans-serif"],
       },
       maxWidth: {
         prose: "68ch",
